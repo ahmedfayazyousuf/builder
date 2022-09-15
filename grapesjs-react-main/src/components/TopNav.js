@@ -5,8 +5,8 @@ function TopNav() {
     toggleSidebar(false);
   };
   return (
-    <nav className="navbar navbar-light">
-      <div className="container">
+    <nav className="navbar navbar-light bg-dark">
+      <div className="container ">
         <button
           className="btn btn-sm btn-outline-primary"
           onClick={handleClick}
