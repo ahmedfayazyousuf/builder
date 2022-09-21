@@ -91,7 +91,7 @@ const Home = () => {
                       <td>
                         <Link to={`/editor/${page._id}`}>Edit Page</Link>
                         <Link to={`/editor/${page._id}`}> </Link>
-                        <a href={`http://192.168.0.110:8080/${page._id}`}>Publish</a>
+                        <a href={`http://192.168.0.199:8080/${page._id}`}>Publish</a>
                       </td>
                     </tr>
                   ))

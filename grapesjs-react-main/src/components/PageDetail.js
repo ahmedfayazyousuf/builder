@@ -74,12 +74,12 @@ function PageDetail({ page }) {
                     </Modal.Header>
                       <Modal.Body> 
                         <div className="col-auto">
-                            <QRCode value={`192.168.0.110:8080/${page._id}`} />
+                            <QRCode value={`192.168.0.199:8080/${page._id}`} />
                         </div>
 
                         <div className="col-auto">
                           <label htmlFor="name" className="form-label">
-                          <a target="_blank" href={`http://192.168.0.110:8080/${page._id}`}>Go to published form</a>
+                          <a target="_blank" href={`http://192.168.0.199:8080/${page._id}`}>Go to published form</a>
                           </label>
                         </div>
                       </Modal.Body>
