@@ -44,7 +44,7 @@ const geditorConfig = (assets, pageId) => {
     selectorManager: selectorManager,
     panels: panels,
     deviceManager: deviceManager,
-    assetManager: { assets: assets, upload: false },
+    assetManager: { assets: assets, upload: true },
     storageManager: storageSetting(pageId),
     canvas: {
       styles: styles,

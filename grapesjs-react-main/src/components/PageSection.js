@@ -49,7 +49,7 @@ export default function PageSection({ pages }) {
           <Modal.Header closeButton>
             <Modal.Title>Create Page</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body> 
             <div className="col-auto">
               <label htmlFor="name" className="form-label">
                 Name

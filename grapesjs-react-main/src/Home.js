@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { createPage } from "./redux/actions/pageAction";
+import "./styles.css";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -26,7 +27,7 @@ const Home = () => {
           <form id="create-page">
             <div className="modal-header">
               <h5 className="modal-title" id="addPageModalLabel">
-                Create Page
+                Welcome to the Form Builder!
               </h5>
             </div>
             <div className="modal-body">
@@ -74,21 +75,23 @@ const Home = () => {
           <table className="table table-bordered table-hover">
             <thead>
               <tr>
-                <td>ID</td>
                 <td>Name</td>
+                <td>ID</td>
                 <td>Slug</td>
-                <td>Action</td>
+                <td>Actions</td>
               </tr>
             </thead>
             <tbody>
               {pages
                 ? pages.map((page) => (
                     <tr key={page._id}>
-                      <td>{page._id}</td>
                       <td>{page.name}</td>
+                      <td>{page._id}</td>                     
                       <td>{page.slug}</td>
                       <td>
-                        <Link to={`/editor/${page._id}`}>Edit</Link>
+                        <Link to={`/editor/${page._id}`}>Edit Page</Link>
+                        <Link to={`/editor/${page._id}`}> </Link>
+                        <a href={`http://192.168.0.110:8080/${page._id}`}>Publish</a>
                       </td>
                     </tr>
                   ))

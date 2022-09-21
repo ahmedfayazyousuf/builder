@@ -426,11 +426,11 @@ export const panels = {
       id: "editor-actions",
       el: ".panel__editor",
       buttons: [
-        {
-          id: "saveDb",
-          className: "fa fa-paper-plane btn-save",
-          command: "saveDb",
-        },
+        // {
+        //   id: "saveDb",
+        //   className: "fa fa-paper-plane btn-save",
+        //   command: "saveDb",
+        // },
         {
           id: "cmd-clear",
           className: "fa fa-trash",
