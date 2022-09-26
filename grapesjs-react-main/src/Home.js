@@ -1,16 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createPage } from "./redux/actions/pageAction";
 import "./styles.css";
 
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import EditIcon from '@mui/icons-material/Edit';
+import Button from '@mui/material/Button';
+
+
 const Home = () => {
+  
   const [name, setName] = useState("");
   const [isValid, setIsValid] = useState(true);
   const dispatch = useDispatch();
 
   const { pageStore } = useSelector((state) => state);
   const { pages } = pageStore;
+
 
   const handleSubmit = async () => {
     if (!name) {
@@ -56,15 +62,16 @@ const Home = () => {
             <div className="modal-footer">
               <button
                 type="button"
-                className="btn btn-secondary btn-sm"
-                data-bs-dismiss="modal"
-              >
-                Clear
-              </button>
-              <button
-                type="button"
-                className="btn btn-primary btn-sm"
+                className="btn rounded btn-dark border border-light"
                 onClick={handleSubmit}
+
+                style={{  
+                  borderRadius: '20px',
+                  margin: '15px',
+                  marginRight: '0px',
+                  paddingLeft: '40px', 
+                  paddingRight: '40px',
+                }}
               >
                 Save
               </button>
@@ -72,7 +79,13 @@ const Home = () => {
           </form>
         </div>
         <div className="col-12 my-2">
-          <table className="table table-bordered table-hover">
+          <table className="table table-hover table-dark" 
+          style={{
+            color: '#fff',
+            opacity: '.7',  
+            borderRadius: '5px',
+          }}
+          >
             <thead>
               <tr>
                 <td>Name</td>
@@ -89,9 +102,30 @@ const Home = () => {
                       <td>{page._id}</td>                     
                       <td>{page.slug}</td>
                       <td>
-                        <Link to={`/editor/${page._id}`}>Edit Page</Link>
-                        <Link to={`/editor/${page._id}`}> </Link>
-                        <a href={`http://192.168.0.110:8080/${page._id}`}>Publish</a>
+
+                        <Button variant="outlined" href={`/editor/${page._id}`} endIcon={<EditIcon />} 
+                        style={{
+                          backgroundColor: '#495151',
+                          color: 'white',
+                          borderColor: 'white',
+                          marginRight: '5px',
+                          textDecoration: 'none',
+                        }}
+                        >
+                          Edit
+                        </Button>
+
+
+                        <Button variant="outlined" href={`http://192.168.0.110:8080/${page._id}`} target="_blank" endIcon={<RemoveRedEyeIcon />} 
+                        style={{
+                          backgroundColor: '#495151',
+                          color: 'white',
+                          borderColor: 'white',
+                          textDecoration: 'none',
+                        }}
+                        >
+                          Preview
+                        </Button>
                       </td>
                     </tr>
                   ))
