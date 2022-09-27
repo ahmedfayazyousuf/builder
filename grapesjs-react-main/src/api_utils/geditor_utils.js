@@ -426,11 +426,6 @@ export const panels = {
       id: "editor-actions",
       el: ".panel__editor",
       buttons: [
-        // {
-        //   id: "saveDb",
-        //   className: "fa fa-paper-plane btn-save",
-        //   command: "saveDb",
-        // },
         {
           id: "cmd-clear",
           className: "fa fa-trash",
@@ -502,13 +497,6 @@ export const addEditorCommand = (editor) => {
     run: (editor) => editor.setDevice("Mobile"),
   });
 
-  // Save Button
-  editor.Commands.add("saveDb", {
-    run: (editor, sender) => {
-      sender && sender.set("active");
-      editor.store();
-    },
-  });
 
   //Clear Button
   editor.Commands.add("cmd-clear", {
