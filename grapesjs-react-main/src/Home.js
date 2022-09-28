@@ -124,7 +124,7 @@ const Home = () => {
                         </Button>
 
 
-                        <Button variant="outlined" href={`http://192.168.0.110:8080/${page._id}`} target="_blank" endIcon={<RemoveRedEyeIcon />} 
+                        <Button variant="outlined" href={`http://192.168.0.199:8080/${page._id}`} target="_blank" endIcon={<RemoveRedEyeIcon />} 
                         style={{
                           backgroundColor: '#495151',
                           color: 'white',
