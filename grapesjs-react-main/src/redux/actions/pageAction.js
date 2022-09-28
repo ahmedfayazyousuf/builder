@@ -30,3 +30,14 @@ export const createPage = (name) => async (dispatch) => {
     dispatch({ type: TYPES.CREATE_PAGE_ERROR, data: error });
   }
 };
+
+// export const deletePage = (id) => async (dispatch) => {
+//   dispatch({ type: TYPES.DELETE_PAGE_REQUEST });
+//   try {
+//     const response = await axios.delete(`${API_HOST}pages/`, { id });
+//     dispatch({ type: TYPES.DELETE_PAGE_SUCCESS, data: response.data });
+//   } catch (error) {
+//     dispatch({ type: TYPES.DELETE_PAGE_ERROR, data: error });
+//   }
+// };
+ 

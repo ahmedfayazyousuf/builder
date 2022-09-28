@@ -6,11 +6,14 @@ import "./styles.css";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import EditIcon from '@mui/icons-material/Edit';
 import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 
 const Home = () => {
   
   const [name, setName] = useState("");
+  // const [id, setId] = useState("");
   const [isValid, setIsValid] = useState(true);
   const dispatch = useDispatch();
 
@@ -25,6 +28,11 @@ const Home = () => {
     }
     createPage(name)(dispatch);
   };
+
+  // const handleDelete = async () => {
+  //   deletePage(id)(dispatch);
+  // };
+
 
   return (
     <div className="container">
@@ -121,11 +129,28 @@ const Home = () => {
                           backgroundColor: '#495151',
                           color: 'white',
                           borderColor: 'white',
+                          marginRight: '5px',
                           textDecoration: 'none',
                         }}
                         >
                           Preview
                         </Button>
+
+                        
+                        <Button variant="outlined" target="_blank" endIcon={<DeleteIcon />} 
+                        // onClick={handleDelete(page._id)}
+                        // onClick={()=>deleteForm(page._id)}
+                        style={{
+                          backgroundColor: '#495151',
+                          color: 'white',
+                          borderColor: 'white',
+                          textDecoration: 'none',
+                          marginRight: '0',
+                        }}
+                        >
+                          Delete
+                        </Button>
+                        
                       </td>
                     </tr>
                   ))
