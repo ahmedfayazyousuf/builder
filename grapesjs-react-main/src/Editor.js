@@ -27,7 +27,6 @@ const Editor = () => {
         setAssets(error.message);
       }
     }
-
     getAllAssets();
   }, []);
 
