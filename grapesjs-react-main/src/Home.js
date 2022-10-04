@@ -8,6 +8,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+ 
 
 
 const Home = () => {
@@ -29,9 +30,18 @@ const Home = () => {
     createPage(name)(dispatch);
   };
 
-  // const handleDelete = async () => {
-  //   deletePage(id)(dispatch);
-  // };
+
+  function deletePageHandler(id) {
+
+    fetch(`http://192.168.0.110:8080/api/pages/${id}`, {
+      method: 'DELETE'
+    }).then((result)=>{
+      result.json().then((resp) => {
+        console.warn(resp);
+        window.location.reload();
+      })
+    })
+  };
 
 
   return (
@@ -124,7 +134,7 @@ const Home = () => {
                         </Button>
 
 
-                        <Button variant="outlined" href={`http://192.168.0.199:8080/${page._id}`} target="_blank" endIcon={<RemoveRedEyeIcon />} 
+                        <Button variant="outlined" href={`http://192.168.0.110:8080/${page._id}`} target="_blank" endIcon={<RemoveRedEyeIcon />} 
                         style={{
                           backgroundColor: '#495151',
                           color: 'white',
@@ -137,9 +147,7 @@ const Home = () => {
                         </Button>
 
                         
-                        <Button variant="outlined" target="_blank" endIcon={<DeleteIcon />} 
-                        // onClick={handleDelete(page._id)}
-                        // onClick={()=>deleteForm(page._id)}
+                        <Button variant="outlined" target="_blank" endIcon={<DeleteIcon />} onClick={()=>deletePageHandler(page._id)}
                         style={{
                           backgroundColor: '#495151',
                           color: 'white',
@@ -164,3 +172,12 @@ const Home = () => {
 };
 
 export default Home;
+
+
+/*
+  phir milenge kabhi
+  ajnabi ki tarah
+
+  is aas main kay
+  dil main subah rakhi hai
+*/

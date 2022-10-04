@@ -15,7 +15,7 @@ import {
   storageSetting,
   styleManager,
   styles,
-  toggleSidebar,
+  // toggleSidebar,
   traitManager,
 } from "./geditor_utils";
 

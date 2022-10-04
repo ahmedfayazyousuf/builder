@@ -9,7 +9,9 @@ import geditorConfig from "./api_utils/geditor_config";
 import PageSection from "./components/PageSection";
 
 const Editor = () => {
+  // eslint-disable-next-line
   const [editor, setEditor] = useState(null);
+  // eslint-disable-next-line
   const [assets, setAssets] = useState([]);
   const { pageId } = useParams();
 

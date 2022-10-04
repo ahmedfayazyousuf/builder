@@ -11,7 +11,7 @@ function TopNav() {
           className="btn btn-sm btn-outline-primary"
           onClick={handleClick}
         >
-          <i className="fa fa-bars"></i>
+          <i className="fa fa-compress"></i>
         </button>
         <div className="panel__devices"></div>
         <div className="panel__editor"></div>

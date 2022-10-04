@@ -9,6 +9,10 @@ export const TYPES = {
   CREATE_PAGE_REQUEST: "CREATE_PAGE_REQUEST",
   CREATE_PAGE_ERROR: "CREATE_PAGE_ERROR",
   CREATE_PAGE_SUCCESS: "CREATE_PAGE_SUCCESS",
+
+  DELETE_PAGE_REQUEST: "DELETE_PAGE_REQUEST",
+  DELETE_PAGE_ERROR: "DELETE_PAGE_ERROR",
+  DELETE_PAGE_SUCCESS: "DELETE_PAGE_SUCCESS",
 };
 
 export const pageLoad = () => async (dispatch) => {
@@ -31,13 +35,16 @@ export const createPage = (name) => async (dispatch) => {
   }
 };
 
-// export const deletePage = (id) => async (dispatch) => {
-//   dispatch({ type: TYPES.DELETE_PAGE_REQUEST });
-//   try {
-//     const response = await axios.delete(`${API_HOST}pages/`, { id });
-//     dispatch({ type: TYPES.DELETE_PAGE_SUCCESS, data: response.data });
-//   } catch (error) {
-//     dispatch({ type: TYPES.DELETE_PAGE_ERROR, data: error });
-//   }
-// };
+export const deletePage = (id) => async (dispatch) => {
+  dispatch({ type: TYPES.DELETE_PAGE_REQUEST });
+  try {
+    const {response} = await axios.delete(`${API_HOST}pages/`, { id });
+    dispatch({ type: TYPES.DELETE_PAGE_SUCCESS, payload: response });
+  } catch (error) {
+    dispatch({ type: TYPES.DELETE_PAGE_ERROR, data: error });
+  }
+};
  
+
+
+

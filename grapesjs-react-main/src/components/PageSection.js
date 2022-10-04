@@ -8,6 +8,7 @@ export default function PageSection({ pages }) {
   const [show, setShow] = useReducer((show) => !show, false);
   const [name, setName] = useState("");
   const [isValid, setIsValid] = useState(true);
+  // eslint-disable-next-line
   const [error, setError] = useState("");
 
   const dispatch = useDispatch();
