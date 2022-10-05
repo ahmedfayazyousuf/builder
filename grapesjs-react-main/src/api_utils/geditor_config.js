@@ -19,6 +19,7 @@ import {
   traitManager,
 } from "./geditor_utils";
 
+
 const geditorConfig = (assets, pageId) => {
   $(".panel__devices").html("");
   $(".panel__basic-actions").html("");
@@ -33,6 +34,7 @@ const geditorConfig = (assets, pageId) => {
   const mainContent = $("#main-content");
   const panelTopBar = $("#main-content > .navbar-light");
 
+
   const editor = grapesjs.init({
     container: "#editor",
     blockManager: {
@@ -44,7 +46,10 @@ const geditorConfig = (assets, pageId) => {
     selectorManager: selectorManager,
     panels: panels,
     deviceManager: deviceManager,
-    assetManager: { assets: assets, upload: true },
+    assetManager: { 
+      assets: assets, 
+      upload: true,
+    },
     storageManager: storageSetting(pageId),
     canvas: {
       styles: styles,
@@ -66,6 +71,7 @@ const geditorConfig = (assets, pageId) => {
 
   addEditorCommand(editor);
 
+//background image code starts here
   const domc = editor.DomComponents
 
   domc.addType('image-block', {
@@ -121,14 +127,17 @@ const geditorConfig = (assets, pageId) => {
       type: 'image-block',
       activeOnRender: true,
       style: {
-        'background-image': `url('http://localhost:8080/api/assets')`,
-        'min-height': '200px',
+        // 'background-image': `url('http://localhost:8080/api/assets')`,
+        'min-height': '800px',
         'background-size': 'cover',
         'background-position': 'center center',
         'background-repeat': 'no-repeat'
       }
     }
   })
+
+  //background image code ends here
+
   editor.on("run:preview", () => {
     console.log("It will trigger when we click on preview icon");
     // This will be used to hide border

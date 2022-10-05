@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { createPage } from "./redux/actions/pageAction";
 import "./styles.css";
 
+
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import EditIcon from '@mui/icons-material/Edit';
 import Button from '@mui/material/Button';
@@ -12,15 +13,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 
 const Home = () => {
-  
   const [name, setName] = useState("");
-  // const [id, setId] = useState("");
   const [isValid, setIsValid] = useState(true);
   const dispatch = useDispatch();
 
   const { pageStore } = useSelector((state) => state);
   const { pages } = pageStore;
 
+  
 
   const handleSubmit = async () => {
     if (!name) {
@@ -165,6 +165,7 @@ const Home = () => {
                 : "No Page"}
             </tbody>
           </table>
+        
         </div>
       </div>
     </div>
@@ -172,12 +173,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-/*
-  phir milenge kabhi
-  ajnabi ki tarah
-
-  is aas main kay
-  dil main subah rakhi hai
-*/
