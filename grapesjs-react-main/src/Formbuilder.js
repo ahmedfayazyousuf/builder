@@ -12,7 +12,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
  
 
 
-const Home = () => {
+const Formbuilder = () => {
   const [name, setName] = useState("");
   const [isValid, setIsValid] = useState(true);
   const dispatch = useDispatch();
@@ -172,4 +172,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Formbuilder;

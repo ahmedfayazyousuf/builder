@@ -1,0 +1,20 @@
+body{
+    background-image: url("darkbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: 0.6;
+}
+
+.welcome {
+    color: red;
+}
+
+.formitems {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
