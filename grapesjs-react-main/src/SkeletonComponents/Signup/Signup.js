@@ -27,7 +27,7 @@ const Signup = () => {
         const res = await fetch("https://skeletonserver.herokuapp.com/register", {
             method: "POST",
             headers: {
-                'Access-Control-Allow-Origin':'https://thhbuilderenv.vercel.app/',
+                'Access-Control-Allow-Origin':'http://192.168.0.110:3000',
                 "Content-Type": "application/json"
             },
             body:JSON.stringify({ 
