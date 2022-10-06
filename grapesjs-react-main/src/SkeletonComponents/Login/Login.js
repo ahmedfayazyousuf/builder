@@ -15,7 +15,7 @@ const Login = () => {
         const res = await fetch('https://skeletonserver.herokuapp.com/login', {
             method:"POST",
             headers:{
-                'Access-Control-Allow-Origin':'http://192.168.0.110:3000',
+                'Access-Control-Allow-Origin':'*',
                 "Content-Type" : "application/json"
             }, 
             body:JSON.stringify({
