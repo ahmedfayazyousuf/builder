@@ -15,7 +15,7 @@ const Login = () => {
         const res = await fetch('https://skeletonserver.herokuapp.com/login', {
             method:"POST",
             headers:{
-                'Access-Control-Allow-Origin':'*',
+                'Access-Control-Allow-Origin':'https://thhbuilderenv.vercel.app/',
                 "Content-Type" : "application/json"
             }, 
             body:JSON.stringify({
