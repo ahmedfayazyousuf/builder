@@ -13,8 +13,8 @@ const Profile = () => {
                 method: "GET", 
                 headers: {
                     Accept: "application/json", 
+                    'Access-Control-Allow-Origin':'https://thhbuilderenv.vercel.app/',
                     "Content-Type": "application/json",
-                    'Access-Control-Allow-Origin':'http://192.168.0.110:3000',
                 },
                 credentials: "include" //so cookies get sent to backend
             });

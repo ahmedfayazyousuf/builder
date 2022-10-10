@@ -1,12 +1,12 @@
 import React, {useState, useContext} from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { UserContext } from '../../App';
 
 const Login = () => {
     // eslint-disable-next-line
     const {state, dispatch} = useContext(UserContext);
 
-    // const history = useHistory();
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -32,7 +32,7 @@ const Login = () => {
         else {
             // dispatch({type: "USER", payload: true})
             window.alert("Login Successful! Welcome Back!");
-            // history("/");
+            history.push("/");
         }
     }
     return (
