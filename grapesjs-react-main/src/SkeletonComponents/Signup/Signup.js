@@ -45,7 +45,7 @@ const Signup = () => {
             window.alert("Registration Successful! Welcome Aboard!");
             console.log("Registration Successful! Welcome Aboard!");
 
-            history("/login");
+            history.push("/login");
         }
 
     }
