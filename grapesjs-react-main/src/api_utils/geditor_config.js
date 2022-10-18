@@ -51,6 +51,7 @@ const geditorConfig = (assets, pageId) => {
       upload: true,
     },
     storageManager: storageSetting(pageId),
+    type: "firestore",
     canvas: {
       styles: styles,
       scripts: scripts,
@@ -60,12 +61,22 @@ const geditorConfig = (assets, pageId) => {
       grapesjsBlockBootstrap,
       grapesjsPluginExport,
       grapesjsStyleBg,
+      'grapesjs-firebase-storage', 
+      'grapesjs-project-manager',
     ],
     pluginsOpts: {
       gjsBlockBasic: {},
       grapesjsBlockBootstrap: {},
       grapesjsPluginExport: {},
       grapesjsStyleBg: {},
+      firebaseConfig: {
+        apiKey: "AIzaSyDdpWQDdjg132oWF8_D0Xmgg3hBaq9WSeQ",
+        authDomain: "assetuploadformbuilder.firebaseapp.com",
+        projectId: "assetuploadformbuilder",
+        storageBucket: "assetuploadformbuilder.appspot.com",
+        messagingSenderId: "1073112018052",
+        appId: "1:1073112018052:web:7741cb6e3bdaa7dacd66d1"
+      }
     },
   });
 

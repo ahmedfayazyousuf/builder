@@ -550,11 +550,15 @@ export const scripts = [
   "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js",
   "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js",
   "https://cdn.jsdelivr.net/npm/chart.js",
+  "https://unpkg.com/grapesjs",
+  "path/to/grapesjs-firebase-storage.min.js",
+
 ];
 export const styles = [
   "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css",
   "https://unpkg.com/swiper@7/swiper-bundle.min.css",
   "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css",
+  "https://unpkg.com/grapesjs/dist/css/grapes.min.css",
 ];
 
 export const toggleSidebar = (fromEditor) => {
