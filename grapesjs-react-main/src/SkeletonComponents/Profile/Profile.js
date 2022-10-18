@@ -9,12 +9,11 @@ const Profile = () => {
 
     const callProfilePage = async () => {
         try {
-            const res = await fetch('https://skeletonserver.herokuapp.com/profile', {
+            const res = await fetch('/profile', {
                 method: "GET", 
                 headers: {
                     Accept: "application/json", 
-                    'Access-Control-Allow-Origin':'https://thhbuilderenv.vercel.app/',
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 },
                 credentials: "include" //so cookies get sent to backend
             });
@@ -30,7 +29,7 @@ const Profile = () => {
              
         } catch(err) {
             console.log(err);
-            history('/login');
+            history.push('/login');
         }
     }
 
@@ -57,7 +56,7 @@ const Profile = () => {
                                             <h6></h6>
                                             <h5>{userData.name}</h5>
                                         </div>
-                                        {/* eslint-disable-next-line */}
+
                                         <div class="row">
                                             {/* eslint-disable-next-line */}
                                             <h6></h6>

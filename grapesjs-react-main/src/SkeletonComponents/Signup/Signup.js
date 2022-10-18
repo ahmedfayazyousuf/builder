@@ -24,10 +24,9 @@ const Signup = () => {
         //object destruction so dont need to write user.name etc again and again
         const { name, email, phone, work, password, cpassword } = user;
         
-        const res = await fetch("https://skeletonserver.herokuapp.com/register", {
+        const res = await fetch("/register", {
             method: "POST",
             headers: {
-                'Access-Control-Allow-Origin':'https://thhbuilderenv.vercel.app/',
                 "Content-Type": "application/json"
             },
             body:JSON.stringify({ 

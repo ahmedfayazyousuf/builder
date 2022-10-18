@@ -7,7 +7,7 @@ const Home = () => {
 
     const callProfilePage = async () => {
         try {
-            const res = await fetch('https://skeletonserver.herokuapp.com/profile', {
+            const res = await fetch('/profile', {
                 method: "GET", 
                 headers: {
                     Accept: "application/json", 

@@ -12,12 +12,11 @@ const Login = () => {
 
     const loginUser = async (e) => {
         e.preventDefault();
-        const res = await fetch('https://skeletonserver.herokuapp.com/login', {
+        const res = await fetch('/login', {
             method:"POST",
             headers:{
-                'Access-Control-Allow-Origin':'https://thhbuilderenv.vercel.app/',
                 "Content-Type" : "application/json"
-            }, 
+            },  
             body:JSON.stringify({
                     email,
                     password

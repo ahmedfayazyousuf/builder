@@ -158,7 +158,6 @@ const Formbuilder = () => {
                         >
                           Delete
                         </Button>
-                        
                       </td>
                     </tr>
                   ))
