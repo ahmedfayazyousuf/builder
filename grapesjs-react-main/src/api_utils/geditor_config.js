@@ -51,7 +51,6 @@ const geditorConfig = (assets, pageId) => {
       upload: true,
     },
     storageManager: storageSetting(pageId),
-    type: "firestore",
     canvas: {
       styles: styles,
       scripts: scripts,
