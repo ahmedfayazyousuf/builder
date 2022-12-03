@@ -17,7 +17,7 @@ const Formbuilder = () => {
   const [isValid, setIsValid] = useState(true);
   const dispatch = useDispatch();
 
-  const { pageStore } = useSelector((state) => state);
+  const { pageStore } = useSelector((state) => state); 
   const { pages } = pageStore;
 
   
@@ -33,7 +33,7 @@ const Formbuilder = () => {
 
   function deletePageHandler(id) {
 
-    fetch(`http://192.168.0.110:8080/api/pages/${id}`, {
+    fetch(`http://192.168.0.103:8080/api/pages/${id}`, {
       method: 'DELETE'
     }).then((result)=>{
       result.json().then((resp) => {
