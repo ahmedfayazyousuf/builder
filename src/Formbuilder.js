@@ -50,15 +50,15 @@ const Formbuilder = () => {
         <div className="col-12 mt-5">
           <form id="create-page">
             <div className="modal-header">
-              <h5 className="modal-title" id="addPageModalLabel">
-                Welcome to the Form Builder!
+              <h5 className="modal-title" id="addPageModalLabel" style={{marginBottom: '5px'}}>
+                Welcome to the Web Builder!
               </h5>
             </div>
             <div className="modal-body">
               <div className="col-auto">
-                <label htmlFor="name" className="form-label">
+                {/* <label htmlFor="name" className="form-label">
                   Name
-                </label>
+                </label> */}
                 <input
                   type="text"
                   className={`form-control form-control-sm ${
