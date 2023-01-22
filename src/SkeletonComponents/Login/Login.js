@@ -48,14 +48,10 @@ const Login = () => {
                                 
                                     <div className="col-md-12">
                                         <input className="form-control" type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" required/>
-                                        <div className="valid-feedback">Email field is valid!</div>
-                                        <div className="invalid-feedback">Email field cannot be blank!</div>
                                     </div> 
 
                                     <div className="col-md-12">
                                         <input className="form-control" type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required/>
-                                        <div className="valid-feedback">Password field is valid!</div>
-                                        <div className="invalid-feedback">Password field cannot be blank!</div>
                                     </div>
                                     
                                     <NavLink to="/signup" >Create an account</NavLink>
