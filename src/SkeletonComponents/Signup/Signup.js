@@ -25,9 +25,11 @@ const Signup = () => {
         const { name, email, phone, work, password, cpassword } = user;
         
         const res = await fetch("https://skeletonserver.azurewebsites.net/register", {
+
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                'Access-Control-Allow-Origin':'*'
             },
             body:JSON.stringify({ 
                 // name: name doesnt need to be written because its the same name
