@@ -18,7 +18,7 @@ export const TYPES = {
 export const pageLoad = () => async (dispatch) => {
   dispatch({ type: TYPES.LIST_PAGE_REQUEST_SEND });
   try {
-    const response = await axios.get(`${API_HOST}pages/`);
+    const response = await axios.get(`${API_HOST}api/pages/`);
     dispatch({ type: TYPES.LIST_PAGE_REQUEST_SUCCESS, data: response.data });
   } catch (error) {
     dispatch({ type: TYPES.LIST_PAGE_REQUEST_ERROR, error: error });
@@ -28,7 +28,7 @@ export const pageLoad = () => async (dispatch) => {
 export const createPage = (name) => async (dispatch) => {
   dispatch({ type: TYPES.CREATE_PAGE_REQUEST });
   try {
-    const response = await axios.post(`${API_HOST}pages/`, { name });
+    const response = await axios.post(`${API_HOST}api/pages/`, { name });
     dispatch({ type: TYPES.CREATE_PAGE_SUCCESS, data: response.data });
   } catch (error) {
     dispatch({ type: TYPES.CREATE_PAGE_ERROR, data: error });
@@ -38,7 +38,7 @@ export const createPage = (name) => async (dispatch) => {
 export const deletePage = (id) => async (dispatch) => {
   dispatch({ type: TYPES.DELETE_PAGE_REQUEST });
   try {
-    const {response} = await axios.delete(`${API_HOST}pages/`, { id });
+    const {response} = await axios.delete(`${API_HOST}api/pages/`, { id });
     dispatch({ type: TYPES.DELETE_PAGE_SUCCESS, payload: response });
   } catch (error) {
     dispatch({ type: TYPES.DELETE_PAGE_ERROR, data: error });

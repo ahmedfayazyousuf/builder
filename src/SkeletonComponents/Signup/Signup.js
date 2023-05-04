@@ -24,7 +24,7 @@ const Signup = () => {
         //object destruction so dont need to write user.name etc again and again
         const { name, email, phone, work, password, cpassword } = user;
         
-        const res = await fetch("/register", {
+        const res = await fetch("http://localhost:5000/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44,7 +44,7 @@ const Signup = () => {
             window.alert("Registration Successful! Welcome Aboard!");
             console.log("Registration Successful! Welcome Aboard!");
 
-            history.push("/login");
+            history.push("http://localhost:5000/login");
         }
 
     }

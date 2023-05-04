@@ -20,8 +20,8 @@ const Editor = () => {
 
   useEffect(() => {
     async function getAllAssets() {
-      try {
-        const response = await axios.get(`${API_HOST}assets/`);
+      try { 
+        const response = await axios.get(`${API_HOST}api/assets/`);
         setAssets(response.data);
       } catch (error) {
         setAssets(error.message);

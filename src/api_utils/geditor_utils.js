@@ -539,8 +539,8 @@ export const storageSetting = (pageId) => {
       "Content-Type": "application/json",
     },
     id: "mycustom-",
-    urlStore: `${API_HOST}pages/${pageId}/content`,
-    urlLoad: `${API_HOST}pages/${pageId}/content`,
+    urlStore: `${API_HOST}api/pages/${pageId}/content`,
+    urlLoad: `${API_HOST}api/pages/${pageId}/content`,
   };
 };
 

@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { createPage } from "./redux/actions/pageAction";
 import "./styles.css";
 
@@ -8,6 +8,7 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import EditIcon from '@mui/icons-material/Edit';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useEffect } from "react";
 
  
 
@@ -17,23 +18,39 @@ const Formbuilder = () => {
   const [isValid, setIsValid] = useState(true);
   const dispatch = useDispatch();
 
-  const { pageStore } = useSelector((state) => state); 
-  const { pages } = pageStore;
+  // const { pageStore } = useSelector((state) => state); 
+  // const { pages } = pageStore;
+
+  const [pages,setPages] = useState([])
 
   
 
   const handleSubmit = async () => {
     if (!name) {
-      setIsValid(false);
+      setIsValid(false); 
       return;
     }
     createPage(name)(dispatch);
   };
 
+  useEffect(()=>{
+    console.log(pages)
+
+    fetch('http://192.168.0.138:8080/api/pages',{
+      method: 'GET'
+    }).then(res => {
+      res.json().then(resp =>{
+        console.log(resp)
+        setPages(resp)
+      })
+    }) 
+    // eslint-disable-next-line
+  },[])
+
 
   function deletePageHandler(id) {
 
-    fetch(`https://webbuilderserver.azurewebsites.net/api/pages/${id}`, {
+    fetch(`http://192.168.0.138:8080/api/pages/${id}`, {
       method: 'DELETE'
     }).then((result)=>{
       result.json().then((resp) => {
@@ -114,7 +131,8 @@ const Formbuilder = () => {
             </thead>
             <tbody>
               {pages
-                ? pages.map((page) => (
+                ?  pages.map((page) => (
+                    
                     <tr key={page._id}>
                       <td>{page.name}</td>
                       <td>{page._id}</td>                     
@@ -134,7 +152,7 @@ const Formbuilder = () => {
                         </Button>
 
 
-                        <Button variant="outlined" href={`https://webbuilderserver.azurewebsites.net/${page._id}`} target="_blank" endIcon={<RemoveRedEyeIcon />} 
+                        <Button variant="outlined" href={`http://192.168.0.138:8080/${page._id}`} target="_blank" endIcon={<RemoveRedEyeIcon />} 
                         style={{
                           backgroundColor: '#495151',
                           color: 'white',
