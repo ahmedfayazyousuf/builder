@@ -89,7 +89,7 @@ function PageDetail({ page }) {
                         }}
                         > 
                         <div className="col-auto">
-                            <QRCode value={`https://webbuilderserver.azurewebsites.net/${page._id}`} />
+                            <QRCode value={`https://pagecraftserver.azurewebsites.net/${page._id}`} />
                         </div>
 
                         <div className="col-auto" style={{
@@ -103,14 +103,14 @@ function PageDetail({ page }) {
 
 
                           <div htmlFor="name" className="form-label" style={{padding: '15px', paddingBottom: '1px'}}>
-                            <input type="text" value={`http://https://webbuilderserver.azurewebsites.net/${page._id}`} id="myInput" style={{color: "black"}} ></input>
+                            <input type="text" value={`https://pagecraftserver.azurewebsites.net/${page._id}`} id="myInput" style={{color: "black"}} ></input>
                             <button onClick={myFunction}>Copy Link</button>
                           </div>
 
 
                           <label htmlFor="name" className="form-label">
                               {/* eslint-disable-next-line */}
-                              <a target="_blank" style={{color: "blue", justifySelf:"center", alignSelf:"center"}} href={`http://https://webbuilderserver.azurewebsites.net/${page._id}`}>Go To Published Form</a>
+                              <a target="_blank" style={{color: "blue", justifySelf:"center", alignSelf:"center"}} href={`https://pagecraftserver.azurewebsites.net/${page._id}`}>Go To Published Form</a>
                           </label>
                           
                         </div>
