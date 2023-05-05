@@ -9,7 +9,7 @@ const Logout = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch('https://skeletonserver.herokuapp.com/logout', {
+        fetch('https://skeletonserver.azurewebsites.net/logout', {
             method: "GET", 
             headers: {
                 Accept: "application/json",

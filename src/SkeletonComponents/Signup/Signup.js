@@ -24,10 +24,12 @@ const Signup = () => {
         //object destruction so dont need to write user.name etc again and again
         const { name, email, phone, work, password, cpassword } = user;
         
-        const res = await fetch("http://localhost:5000/register", {
-            method: "POST", 
+        const res = await fetch("https://skeletonserver.azurewebsites.net/register", {
+
+            method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                'Access-Control-Allow-Origin':'*'
             },
             body:JSON.stringify({ 
                 // name: name doesnt need to be written because its the same name
@@ -44,7 +46,7 @@ const Signup = () => {
             window.alert("Registration Successful! Welcome Aboard!");
             console.log("Registration Successful! Welcome Aboard!");
 
-            history.push("http://localhost:5000/login");
+            history.push("https://skeletonserver.azurewebsites.net/login");
         }
 
     }

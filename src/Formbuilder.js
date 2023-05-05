@@ -36,7 +36,7 @@ const Formbuilder = () => {
   useEffect(()=>{
     console.log(pages)
 
-    fetch('http://192.168.0.138:8080/api/pages',{
+    fetch('https://pagecraftserver.azurewebsites.net/api/pages',{
       method: 'GET'
     }).then(res => {
       res.json().then(resp =>{
@@ -50,7 +50,7 @@ const Formbuilder = () => {
 
   function deletePageHandler(id) {
 
-    fetch(`http://192.168.0.138:8080/api/pages/${id}`, {
+    fetch(`https://pagecraftserver.azurewebsites.net/api/pages/${id}`, {
       method: 'DELETE'
     }).then((result)=>{
       result.json().then((resp) => {
@@ -152,7 +152,7 @@ const Formbuilder = () => {
                         </Button>
 
 
-                        <Button variant="outlined" href={`http://192.168.0.138:8080/${page._id}`} target="_blank" endIcon={<RemoveRedEyeIcon />} 
+                        <Button variant="outlined" href={`https://pagecraftserver.azurewebsites.net/${page._id}`} target="_blank" endIcon={<RemoveRedEyeIcon />} 
                         style={{
                           backgroundColor: '#495151',
                           color: 'white',
