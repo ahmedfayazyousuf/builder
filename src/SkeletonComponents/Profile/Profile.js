@@ -9,7 +9,7 @@ const Profile = () => {
 
     const callProfilePage = async () => {
         try {
-            const res = await fetch('/profile', {
+            const res = await fetch('https://skeletonserver.azurewebsites.net/profile', {
                 method: "GET", 
                 headers: {
                     Accept: "application/json", 
@@ -29,7 +29,7 @@ const Profile = () => {
              
         } catch(err) {
             console.log(err);
-            history.push('/login');
+            history.push('https://skeletonserver.azurewebsites.net/login');
         }
     }
 
