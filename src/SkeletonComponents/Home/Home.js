@@ -54,7 +54,7 @@ const Home = () => {
                                                 </div>
 
                                                 <div class="row">
-                                                    <h4> To The Hanging House Website Builder! </h4>
+                                                    <h4> To The Pagecraft Website Builder! </h4>
                                                     <h4> {userData.name} </h4>
                                                 </div>
                                     </div>

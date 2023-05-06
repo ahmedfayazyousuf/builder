@@ -51,7 +51,7 @@ const Navbar = () => {
     return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: '#00171D'}}>   
         <NavLink className="navbar-brand" to="/">
-            <img style={{width: '100px', marginLeft: '15px'}} src={thhlogoo} alt="the hanging house logo"/>
+            <img style={{width: '40px', marginLeft: '15px'}} src={thhlogoo} alt="the hanging house logo"/>
         </NavLink>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
