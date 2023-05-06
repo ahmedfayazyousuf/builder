@@ -46,7 +46,7 @@ const Signup = () => {
             window.alert("Registration Successful! Welcome Aboard!");
             console.log("Registration Successful! Welcome Aboard!");
 
-            history.push("https://skeletonserver.azurewebsites.net/login");
+            history.push("/login");
         }
 
     }

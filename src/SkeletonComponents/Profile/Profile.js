@@ -29,7 +29,7 @@ const Profile = () => {
              
         } catch(err) {
             console.log(err);
-            history.push('https://skeletonserver.azurewebsites.net/login');
+            history.push('/login');
         }
     }
 
