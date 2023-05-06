@@ -12,8 +12,9 @@ const Profile = () => {
             const res = await fetch('https://skeletonserver.azurewebsites.net/profile', {
                 method: "GET", 
                 headers: {
-                    Accept: "application/json", 
-                    "Content-Type": "application/json"
+                    Accept: "application/json",  
+                    "Content-Type": "application/json",
+                    'Access-Control-Allow-Origin':'*'
                 },
                 credentials: "include" //so cookies get sent to backend
             });
